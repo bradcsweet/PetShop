@@ -8,7 +8,7 @@ namespace PetShop.Models
     public class PetFoodViewModel
     {
         public Pet pet { get; set; }
-        public Food food { get; set; }
+        public ICollection<Food> foods { get; set; }
 
     }
 }

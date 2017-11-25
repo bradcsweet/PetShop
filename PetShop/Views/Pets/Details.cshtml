@@ -37,41 +37,21 @@
     </dl>
 
     <h3>Food Info</h3>
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.food.FoodName)
-        </dt>
+    @foreach (var item in Model.foods)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => item.FoodName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.food.FoodName)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => item.FoodName)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.food.FoodType)
-        </dt>
+        </dl>
+        <hr />
 
-        <dd>
-            @Html.DisplayFor(model => model.food.FoodType)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.food.FoodInfo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.food.FoodInfo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.food.FoodNotes)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.food.FoodNotes)
-        </dd>
-
-    </dl>
-
+    }
 
 </div>
 <p>
